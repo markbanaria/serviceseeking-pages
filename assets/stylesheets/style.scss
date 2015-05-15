@@ -1,0 +1,75 @@
+//foundation and bourbon
+@import "../../node_modules/foundation/scss/foundation.scss";
+@import "../../node_modules/foundation/scss/normalize";
+@import "bourbon";
+
+//common
+@import "common/colors";
+@import "common/fonts";
+
+body * {
+	font-family: "prx-nova" sans-serif;
+	list-style-type: none;
+}
+
+body {
+	min-height: 100%;
+}
+
+p, a, button, label, h5 {
+	font-size: 14px;
+	line-height: 24px;
+	&.compressed {
+		line-height: 20px;
+	}
+}
+a {
+	outline: none;
+	&:focus {
+		outline: none;
+	}	
+}
+
+h1 {
+	font-size: 45px;
+	font-weight: 600;
+	color: $blue-main;
+}
+
+h2 {
+	font-size: 34px;
+	font-weight: 600;
+	color: $k50;
+}
+
+h3 {
+	font-size: 24px;
+	font-weight: 300;
+	color: $k50;
+}
+
+h4 {
+	font-size: 20px;
+	font-weight: 300;
+	color: $k50;
+}
+
+.section {
+	@include clearfix;
+}
+
+.page-title {
+	margin-top: 64px;
+	padding: 0;
+}
+
+.reverse {
+	color: white;
+}
+
+//components
+@import "navbar";
+@import "footer";
+
+//views
+@import "views/projectconfirmation";

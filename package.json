@@ -1,0 +1,30 @@
+{
+  "name": "serviceseeking-pages",
+  "version": "0.0.1",
+  "description": "Static web pages for serviceseeking.com.au",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "flux": "^2.0.0",
+    "react": "latest",
+    "react-router": "latest",
+    "underscore": "^1.7.0",
+    "jquery": "^2.0.0",
+    "foundation": "latest",
+    "leaflet": "latest",
+    "node-sass": "latest",
+    "fastclick": "latest",
+    "velocity-animate": "latest",
+    "file-loader": "^0.8.1",
+    "url-loader": "^0.5.5"
+  },
+  "devDependencies": {
+    "node-bourbon": "^4.2.1-beta1",
+    "node-sass": "latest"
+  },
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack",
+    "deploy": "NODE_ENV=production webpack -p --config webpack.production.config.js"
+  },
+  "author": "markbanaria for serviceseeking.com.au"
+}
