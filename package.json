@@ -16,16 +16,15 @@
     "velocity-animate": "latest",
     "file-loader": "^0.8.1",
     "url-loader": "^0.5.5",
-    "webpack": "latest"
-  },
-  "devDependencies": {
+    "webpack": "latest",
     "node-bourbon": "^4.2.1-beta1",
     "node-sass": "latest"
   },
+  "devDependencies": {
+  },
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "webpack",
-    "deploy": "NODE_ENV=production webpack -p --config webpack.production.config.js"
+    "build": "webpack"
   },
   "author": "markbanaria for serviceseeking.com.au"
 }
