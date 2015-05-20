@@ -1,7 +1,13 @@
 .ProjectConfirmation {
-	background: $blue-main;
-	padding-bottom: 64px;
-	h4 {
-		opacity: 0.6;
+	.section {
+		padding-bottom: 64px;
+		padding-top: 32px;
+		h4 {
+			opacity: 0.6;
+		}
+		.success-icon {
+			margin: 10%;
+			width: 80%;
+		}
 	}
 }

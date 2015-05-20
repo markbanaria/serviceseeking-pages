@@ -1,0 +1,17 @@
+.Categories {
+	.ButtonGroupButton {
+		min-width: 30%;
+	}
+	.category-list {
+		hr {
+		}
+		h2 {
+			color: $blue-main;
+		}
+		a {
+			&:hover {
+				color: $blue-main;
+			}
+		}
+	}
+}

@@ -4,6 +4,7 @@ var Card = require('../components/common/Card.jsx');
 var ArticlePanel = require('../components/common/ArticlePanel.jsx');
 var ListColumns = require('../components/ListColumns.jsx');
 var ReviewsCard = require('../components/ReviewsCard.jsx');
+var ProjectSearch = require('../components/ProjectSearch.jsx');
 var Data = require('../data/topProviders.jsx');
 var catData = require('../data/categories.jsx');
 var LocData = require('../data/locations.jsx');
@@ -13,7 +14,7 @@ var articlesData = require('../data/articles.jsx');
 var Router = require('react-router');
 var Link = Router.Link;
 
-var SubCategories = React.createClass({
+var Search = React.createClass({
 
 	render: function() {
 		var style = {
@@ -66,28 +67,20 @@ var SubCategories = React.createClass({
 			relatedCategories.push(item.name);
 		});
 
-		var relatedServices = catData.categories[0].relatedServices;
-
+		var relatedServices = catData.categories[0].relatedServices;		
 		return (
-			<div className="SubCategories">			
+			<div className="Search">
 				<div className="section">
-					<div className="row page-panel title-panel">
-						<div className="large-4 columns break">
-							<div className="cover-img large-11 small-12" style={style} />
+					<div className="row page-panel">
+						<div className="large-12 columns break">
+							<ProjectSearch />
+							<h1>Search Results for Events</h1>
 						</div>
-						<div className="large-7 columns break break-end">
-							<h1 className="compress">Wedding & Event Planners</h1>
-							<h3 className="compress break-end">from 35$ per hour</h3>
-							<p className="break break-end">
-								From the invitations to the decorations, we have wedding & event planners who can take care of every single aspect of your wedding. Planning your perfect wedding is a stressful job, so you definitely need all the help you can get. Luckily, our experienced wedding & event planners are always ready to assist you in looking for the best wedding photographer, celebrant, hair and makeup artist, caterer, wedding dress designer, and many more. For pricing details, visit Cost of Wedding & Event Planners.
-							</p>
-							<a className="moss button full hover"><h4 className="reverse">Post a Job</h4></a>
-						</div>
-					</div>						
+					</div>					
 					<div className="row break break-end">
 						<div className="large-12 columns blue break-end">
 							<Card>
-								<h4 className="break reverse">Services under Weddings & Events</h4>
+								<h4 className="break reverse">Services under Weddings & <b>Events</b></h4>
 								<ListColumns data={relatedServices} name="relatedServices" anchorclass="reverse" />
 							</Card>								
 						</div>
@@ -95,47 +88,19 @@ var SubCategories = React.createClass({
 					<div className="row	page-panel">
 						<div className="large-12 columns">
 							<hr className="compress" />
-							<h3 className="break-end">Top Wedding & Event Planners</h3>
+							<h3 className="break-end">Top Wedding & <b>Event</b> Planners</h3>
 							{topcontent}
 						</div>
 					</div>
-					<div className="row page-panel">
-						<div className="large-12 columns break">
-							<hr className="compress" />
-							<h3 className="">Find Wedding & Event Planners near:</h3>
-						</div>
-					</div>
-					<div className="row compress">
-						<div className="large-3 columns">
-							{LocLinks[1]}
-							{LocLinks[2]}
-						</div>
-						<div className="large-3 columns">
-							{LocLinks[3]}
-							{LocLinks[4]}
-						</div>
-						<div className="large-3 columns">
-							{LocLinks[5]}
-							{LocLinks[6]}
-						</div>
-						<div className="large-3 columns">
-							{LocLinks[7]}
-						</div>
-					</div>
 					<div className="row page-panel break-end">
 						<hr className="compress break" />
-						<h3 className="break-end">Latest Reviews</h3>
-						{reviewsSet}						
-					</div>
-					<div className="row page-panel break-end">
-						<hr className="compress break" />
-						<h3 className="break-end">Related Articles</h3>
+						<h3 className="break-end">Articles related to <b>Events</b></h3>
 						{articles}						
 					</div>
 					<div className="row page-panel">
 						<div className="large-12 columns">
 							<hr className="break" />
-							<h4>Related categories</h4>
+							<h4>Categories related to <b>Events</b></h4>
 							<ListColumns data={relatedCategories} name="relatedCategories" anchorclass="green" />
 							<Link to="cats" className="button full cta moss hover" >View all Categories</Link>
 						</div>
@@ -147,4 +112,4 @@ var SubCategories = React.createClass({
 
 });
 
-module.exports = SubCategories;
+module.exports = Search;

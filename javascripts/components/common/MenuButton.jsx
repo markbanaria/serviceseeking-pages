@@ -37,7 +37,7 @@ var MenuButton = React.createClass({
     }.bind(this));
     return (
       <div className={"MenuButton " + this.props.className}>
-        <a className={"icon-button " + (this.state.opened ? "selected" : "") } onClick={ this.clickHandler }>
+        <a className={"icon-button " + this.props.anchorClass + (this.state.opened ? "selected" : "") } onClick={ this.clickHandler }>
           {this.props.icon}
         </a>
         <Collapse opened={ this.state.opened }>

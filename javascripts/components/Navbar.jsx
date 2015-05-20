@@ -10,19 +10,15 @@ var Navbar = React.createClass({
 			<div className="Navbar">
 				<div className="main section">
 					<div className="row">
-						<Link className="logo" to="home"><img src="/assets/logo-full.png" /></Link>
+						<Link className="logo" to="home">Summary</Link>
 						<Link to="addproj">Additional Projects</Link>
-						<Link to="cats">Categories</Link>
-						<Link to="subcats">Subcategories</Link>
+						<Link to="cats">Category List</Link>
+						<Link to="subcats">Category Page</Link>
+						<Link to="search">Search Results</Link>
 					</div>
 				</div>
 				<div className="sub section">
 					<div className="row">
-						<a>Leads</a>
-						<a>Quotes</a>
-						<a>Invoices</a>
-						<a>Feedback</a>
-						<a>Training</a>
 					</div>
 				</div>
 			</div>
